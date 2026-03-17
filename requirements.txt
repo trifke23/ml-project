@@ -1,5 +1,10 @@
 # Add runtime dependencies here, for example:
-# pandas
-# numpy
-# scikit-learn
-# distutils
+pandas
+numpy
+scikit-learn
+seaborn
+matplotlib
+jupyterlab
+ipykernel
+xgboost
+catboost

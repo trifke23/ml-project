@@ -1,0 +1,6 @@
+[ 2026-03-17 10:20:29,135 ] 34 root - INFO - Logger file has started.
+[ 2026-03-17 10:20:29,135 ] 41 root - ERROR - A test error occurred while running logger.py
+Traceback (most recent call last):
+  File "C:\Users\Trifke\Desktop\mlproject\src\logger.py", line 38, in <module>
+    result = 10 / 0
+ZeroDivisionError: division by zero
