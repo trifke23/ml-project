@@ -1,5 +1,5 @@
 """Data ingestion component placeholder. Gledamo odakle dolaze podaci i kako ih učitavamo u naš pipeline.
-    READ DATA, SPLIT DATA, PREPROCESSING, FEATURE ENGINEERING"""
+    READ DATA, SPLIT DATA"""
 
 import os 
 import sys
@@ -13,6 +13,10 @@ from src.logger import configure_logger, logging
 import pandas as pd 
 from sklearn.model_selection import train_test_split
 from dataclasses import dataclass ##dataclass is a decorator that automatically generates special methods like __init__() and __repr__() for classes, making it easier to create classes that primarily store data.
+from src.components.data_transformation import DataTransformation
+from src.components.data_transformation import DataTransformationConfig
+from src.components.model_trainer import ModelTrainer
+from src.components.model_trainer import ModelTrainerConfig
 
 @dataclass ##koristi se za označavanje klase kao dataclass, što znači da će se automatski generisati metode poput __init__() i __repr__() na osnovu definisanih atributa klase.
 class DataIngestionConfig:  ##sve sto je potrebno za konfiguraciju data ingestiona, npr. putanje do fajlova, parametri za splitovanje itd.
@@ -54,5 +58,11 @@ class DataIngestion:
         
 if __name__ == "__main__":
     obj = DataIngestion() ##kreiramo instancu DataIngestion klase
-    obj.initiate_data_ingestion() ##pozivamo metodu za data ingestion
-    
+    train_data, test_data = obj.initiate_data_ingestion() ##pozivamo metodu za data ingestion
+
+    data_transformation = DataTransformation() ##kreiramo instancu DataTransformation klase
+    train_arr, test_arr, _ = data_transformation.initiate_data_transformation(train_data, test_data) ##pozivamo metodu za data transformation, prosledjujemo putanje do train i test podataka
+
+    model_trainer = ModelTrainer()
+    r2 = model_trainer.initiate_model_trainer(train_arr, test_arr)
+    print(f"Best model R2 score: {r2:.4f}")

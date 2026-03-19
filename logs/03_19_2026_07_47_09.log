@@ -1,0 +1,30 @@
+[ 2026-03-19 07:47:12,249 ] 35 root - INFO - Data Ingestion method starts
+[ 2026-03-19 07:47:12,252 ] 38 root - INFO - Dataset read as pandas dataframe
+[ 2026-03-19 07:47:12,259 ] 43 root - INFO - Train test split initiated
+[ 2026-03-19 07:47:12,267 ] 49 root - INFO - Ingestion of the data is completed
+[ 2026-03-19 07:47:12,271 ] 81 root - INFO - Read train and test data completed
+[ 2026-03-19 07:47:12,271 ] 82 root - INFO - Obtaining preprocessor object
+[ 2026-03-19 07:47:12,272 ] 59 root - INFO - Categorical columns encoding completed
+[ 2026-03-19 07:47:12,272 ] 60 root - INFO - Numerical columns scaling completed
+[ 2026-03-19 07:47:12,272 ] 68 root - INFO - Preprocessor object created successfully
+[ 2026-03-19 07:47:12,274 ] 93 root - INFO - Applying preprocessor object on training and testing dataframe
+[ 2026-03-19 07:47:12,303 ] 101 root - INFO - Saved preprocessor object
+[ 2026-03-19 07:47:12,308 ] 34 root - INFO - Splitting training and test input data
+[ 2026-03-19 07:47:12,316 ] 59 root - INFO - Training model: Random Forest
+[ 2026-03-19 07:47:12,651 ] 64 root - INFO - Random Forest R2 score: 0.8488
+[ 2026-03-19 07:47:12,651 ] 59 root - INFO - Training model: Decision Tree
+[ 2026-03-19 07:47:12,657 ] 64 root - INFO - Decision Tree R2 score: 0.7473
+[ 2026-03-19 07:47:12,657 ] 59 root - INFO - Training model: Gradient Boosting
+[ 2026-03-19 07:47:12,774 ] 64 root - INFO - Gradient Boosting R2 score: 0.8722
+[ 2026-03-19 07:47:12,774 ] 59 root - INFO - Training model: Linear Regression
+[ 2026-03-19 07:47:12,783 ] 64 root - INFO - Linear Regression R2 score: 0.8804
+[ 2026-03-19 07:47:12,784 ] 59 root - INFO - Training model: XGBoost
+[ 2026-03-19 07:47:13,207 ] 64 root - INFO - XGBoost R2 score: 0.8231
+[ 2026-03-19 07:47:13,207 ] 59 root - INFO - Training model: CatBoost
+[ 2026-03-19 07:47:14,453 ] 64 root - INFO - CatBoost R2 score: 0.8511
+[ 2026-03-19 07:47:14,453 ] 59 root - INFO - Training model: AdaBoost
+[ 2026-03-19 07:47:14,569 ] 64 root - INFO - AdaBoost R2 score: 0.8534
+[ 2026-03-19 07:47:14,569 ] 59 root - INFO - Training model: KNeighbors
+[ 2026-03-19 07:47:16,574 ] 64 root - INFO - KNeighbors R2 score: 0.4756
+[ 2026-03-19 07:47:16,575 ] 74 root - INFO - Best model found: Linear Regression with R2 score 0.8804
+[ 2026-03-19 07:47:16,579 ] 81 root - INFO - Best model saved at artifacts\model.pkl

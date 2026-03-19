@@ -1,0 +1,7 @@
+[ 2026-03-17 15:38:13,345 ] 81 root - INFO - Read train and test data completed
+[ 2026-03-17 15:38:13,345 ] 82 root - INFO - Obtaining preprocessor object
+[ 2026-03-17 15:38:13,346 ] 59 root - INFO - Categorical columns encoding completed
+[ 2026-03-17 15:38:13,346 ] 60 root - INFO - Numerical columns scaling completed
+[ 2026-03-17 15:38:13,346 ] 68 root - INFO - Preprocessor object created successfully
+[ 2026-03-17 15:38:13,351 ] 93 root - INFO - Applying preprocessor object on training and testing dataframe
+[ 2026-03-17 15:38:13,388 ] 101 root - INFO - Saved preprocessor object

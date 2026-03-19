@@ -27,3 +27,13 @@ htmlcov/
 # OS files
 .DS_Store
 Thumbs.db
+
+#Environments
+.env
+.venv
+.artifacts
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
